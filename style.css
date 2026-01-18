@@ -1,0 +1,57 @@
+:root {
+    --eg-gold: #B59A5B;
+    --eg-green: #00A651;
+    --eg-teal: #1BBC9B;
+    --eg-txt-gold: #8a7310;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background: #f4f7f6; overflow-x: hidden; }
+.hidden { display: none !important; }
+
+/* AUTH/LOGIN STYLES */
+.full-view { width: 100%; min-height: 100vh; background: linear-gradient(to bottom, var(--eg-gold), #153822); display: flex; justify-content: center; align-items: center; padding: 15px; }
+.auth-box { background: #fff; width: 100%; max-width: 420px; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); overflow: hidden; }
+.entry-group label { display: block; font-weight: 900; font-size: 18px; margin-bottom: 8px; color: #000; }
+.entry-group input { width: 100%; padding: 15px; font-size: 18px; border: 1px solid #ccc; border-radius: 5px; }
+.auth-btn { width: 100%; padding: 18px; background: #3498db; color: #fff; font-size: 20px; font-weight: bold; border-radius: 5px; border: none; cursor: pointer; }
+
+/* PORTAL HEADER */
+.portal-header { background: var(--eg-gold); height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: sticky; top: 0; z-index: 1000; }
+#menu-btn { background: none; border: none; color: #fff; font-size: 40px; cursor: pointer; }
+.user-avatar { width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff; }
+
+/* SIDEBAR */
+.main-sidebar { position: fixed; top: 70px; left: -100%; width: 300px; height: calc(100vh - 70px); background: var(--eg-green); transition: 0.3s; z-index: 999; overflow-y: auto; }
+.main-sidebar.active { left: 0; }
+.nav-item { width: 100%; background: none; border: none; color: #fff; text-align: left; padding: 18px 20px; display: flex; align-items: center; gap: 15px; font-size: 17px; cursor: pointer; }
+.nav-tag { color: #a5f3c5; font-size: 14px; font-weight: bold; padding: 25px 20px 10px; }
+
+/* DASHBOARD CARDS */
+.portal-main { padding: 15px; width: 100%; }
+.info-card { background: #fff; border-radius: 6px; margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; }
+.info-header { background: var(--eg-gold); color: white; padding: 18px; font-weight: bold; font-size: 20px; }
+.field-row label { display: block; font-weight: 900; font-size: 18px; color: #000; margin-bottom: 5px; }
+.p-val { font-size: 18px; font-weight: bold; }
+.gold-txt { color: var(--eg-txt-gold); }
+.action-btn { width: 100%; padding: 18px; background: var(--eg-teal); color: #fff; border-radius: 5px; font-weight: bold; font-size: 18px; border: none; cursor: pointer; }
+
+/* PAYMENT GATEWAY STYLES (NEW) */
+.gateway-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.gateway-item { 
+    padding: 20px; 
+    border-bottom: 1px solid #eee; 
+    font-size: 18px; 
+    font-weight: 700; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    color: #444;
+}
+.gateway-item:hover { background: #f9f9f9; cursor: pointer; }
+.back-link { border: none; background: none; color: var(--eg-gold); font-size: 18px; font-weight: bold; margin-bottom: 10px; cursor: pointer; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-sidebar { width: 85%; }
+}
